@@ -1,0 +1,177 @@
+function showResults(v1)
+{	
+	if (v1.length==0)
+	{
+		if (document.getElementById("SLength").value.length<=0 || document.getElementById("SWidth").value.length<=0)
+		{
+			if (document.getElementById("SLength").value.length<=0)
+			{
+				document.getElementById('SLength').style.border="solid 1px #DD0000";
+				document.getElementById('SLength').style.borderRadius="4px";
+				document.getElementById('SLength').style.boxShadow="0px 0px 10px #BB0000";
+			}
+			if (document.getElementById("SWidth").value.length<=0)
+			{
+				document.getElementById('SWidth').style.border="solid 1px #DD0000";
+				document.getElementById('SWidth').style.borderRadius="4px";
+				document.getElementById('SWidth').style.boxShadow="0px 0px 10px #BB0000";
+			}
+			//alert ("Enter a valid numeric value in Height/Width");
+			return false;
+		}
+		else if (document.getElementById("sizes").value=="Select Size" || document.getElementById("sizes").value.length<=0)
+		{
+			//alert ("Select a size please");
+			document.getElementById('sizes').style.border="solid 1px #DD0000";
+			document.getElementById('sizes').style.borderRadius="4px";
+			document.getElementById('sizes').style.boxShadow="0px 0px 10px #BB0000";
+			return false;
+		}
+		else
+		{	
+			calculate();	
+			document.getElementById("Results").style.display="";
+		}
+	}
+}
+function setpicimage(l,w){
+	
+	document.getElementById("xlength").innerText = l + ' Ft';
+	document.getElementById("ylength").innerText = w + ' Ft';
+	
+	}
+	
+function calculate()
+{
+	var SLength=document.getElementById("SLength").value;
+	var SWidth=document.getElementById("SWidth").value;
+	setpicimage(SLength,SWidth);
+	document.getElementById("ar_feet").value = parseFloat(SLength)*parseFloat(SWidth);
+	document.getElementById("ar_mtr").value = parseFloat((parseFloat(SLength)*parseFloat(SWidth))/(3.28*3.28),3);
+	var tileSize = document.getElementById("sizes").value;
+	
+	var tilesinbox;
+	//tilesinbox=0;
+	/*
+	if (tileSize == "300 x 450")
+	   { tilesinbox = 6;}
+    else if (tileSize == "300 x 600")
+	   { tilesinbox = 5;}*/
+  	/*else if (tileSize == "300 x 600")
+	   { tilesinbox = 5;}*/
+
+	
+	tilesinbox = document.getElementById("sizes").options[document.getElementById("sizes").selectedIndex].dataset.picperbox;
+	
+	//tilesinbox = document.getElementById("sizes").[selectindex].dataset.picperbox;
+	
+	if (tileSize.indexOf("mm")>0) tileSize = tileSize.substr(0,tileSize.indexOf("mm"));
+	tileCoords=tileSize.split("x");
+	sLength=SLength*304.8;
+	sWidth=SWidth*304.8;
+	var doorSize, winSize;
+
+	var TileArea = (parseFloat(sLength)*parseFloat(sWidth));
+
+	xVal=tileCoords[0];
+	yVal=tileCoords[1];
+
+	var tileSize = (parseFloat(xVal) * parseFloat(yVal));
+	var TotalTilesRequired = TileArea/tileSize;
+	if ((TotalTilesRequired-Math.round(TotalTilesRequired))>0) 
+		TotalTilesRequired=Math.round(TotalTilesRequired)+1;
+	else
+		TotalTilesRequired=Math.round(TotalTilesRequired,0);
+	document.getElementById("TotalTiles").value = TotalTilesRequired;
+	
+	
+	var boxcount = parseFloat(TotalTilesRequired/ tilesinbox );
+	
+	if ((boxcount-Math.round(boxcount))>0) 
+		boxcount=Math.round(boxcount)+1;
+	else
+		boxcount=Math.round(boxcount,0);
+	document.getElementById("TotalBoxes").value = boxcount;
+}
+
+function showResultss(v1)
+{	
+	if (v1.length==0)
+	{
+		if (document.getElementById("totalArea").value =="" || document.getElementById("totalArea").value.length<=0)
+		{
+			//alert ("Please Enter Area !");
+			document.getElementById('totalArea').style.border="solid 1px #DD0000";
+			document.getElementById('totalArea').style.borderRadius="4px";
+			document.getElementById('totalArea').style.boxShadow="0px 0px 10px #BB0000";
+			return false;
+		}
+		else if(isNaN(document.getElementById("totalArea").value)) 
+		{
+			alert("Must input numbers");
+			document.getElementById('totalArea').style.border="solid 1px #DD0000";
+			document.getElementById('totalArea').style.borderRadius="4px";
+			document.getElementById('totalArea').style.boxShadow="0px 0px 10px #BB0000";
+			return false;
+		}
+		else if (document.getElementById("sizess").value=="Select Size")
+		{
+			//alert ("Select a size please");
+			document.getElementById('sizess').style.border="solid 1px #DD0000";
+			document.getElementById('sizess').style.borderRadius="4px";
+			document.getElementById('sizess').style.boxShadow="0px 0px 10px #BB0000";
+			return false;
+		}
+		else
+		{	
+			calculates();	
+			document.getElementById("Results").style.display="";
+		}
+	}
+
+}
+function calculates()
+{
+	var area = document.getElementById("area").value;
+	var totalArea = document.getElementById("totalArea").value;
+	var sizes = document.getElementById("sizess").value;
+	
+	var tilesinbox=0;
+	
+	if (tileSize == "300 x 450")
+	   { tilesinbox = 6;}
+    else if (tileSize == "300 x 600")
+	   { tilesinbox = 5;}
+  	/*else if (sizes == "300 x 600")
+	   { tilesinbox = 5;}*/
+		
+		
+	if(area == 'sqft')
+	{
+		var t_feet = totalArea;
+		var ar_mtr = t_feet * 0.092903;  // sq ft  to sq mt convert 1 sq ft = 0.092903 sq mt
+	}
+	else if(area == 'sqmt')
+	{
+		var ar_mtr = totalArea;
+		var t_feet = ar_mtr * 10.7639;  // sq mt  to sq ft convert 1 sq mt = 10.7639 sq ft
+		
+	}
+	
+	if (sizes.indexOf("mm")>0) sizes = sizes.substr(0,tileSize.indexOf("mm"));
+	tileCoords=sizes.split("x");
+	
+	xVal=tileCoords[0];
+	yVal=tileCoords[1];
+	
+	var onetilearea = (xVal/1000)*(yVal/1000)
+	
+	var tot_tile = Math.round((ar_mtr / onetilearea),0);  // 0.36 is 1 tile coverd area for 600 x 600 mm
+	var tot_box = Math.round((tot_tile/tilesinbox),0);  	//where 4 is total pic. in one box
+	document.getElementById("ar_mtr").value = ar_mtr;
+	document.getElementById("ar_feet").value = t_feet;
+	document.getElementById("TotalTiles").value = tot_tile ;
+	document.getElementById("TotalBoxes").value = tot_box ;
+	
+}
+    
