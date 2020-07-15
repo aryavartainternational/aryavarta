@@ -36,46 +36,76 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <style type="text/css">
+        .translated-ltr{margin-top:-400px;}
+    .translated-ltr{margin-top:-400px;}
+.goog-te-banner-frame {display: none;margin-top:-400px;}
 
+.goog-logo-link {
+   display:none !important;
+} 
+
+.goog-te-gadget{
+   color: transparent !important;
+}
+    </style>
+    <style type="text/css">
+        .google_translate_element{
+            box-sizing: 10px*30px;
+        }
+    </style>
 </head>
 <body>
 <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-        <![endif]-->
 <header>
 <div class="header-area ">
 <div id="sticky-header" class="main-header-area">
  <div class="container-fluid">
 <div class="header_bottom_border">
 <div class="row align-items-center">
-<div class="col-xl-3 col-lg-2">
+<div class="col-xl-2 col-lg-2">
 <div class="logo">
 <a href="#">
 <img src="./interior_files/logo.png" alt="">
 </a>
 </div>
 </div>
-<div class="col-xl-9 col-lg-10">
+<div class="col-xl-8 col-lg-8">
 <div class="main-menu  d-none d-lg-block">
 <nav>
 <ul id="navigation" style="font color: black;">
 <li><a class="active" href="index.html">home</a></li>
 <li><a href="about.html">about</a></li>
-<li><a href="projects.html">Projects</a></li>
-<li><a href="projects_D.html">project details</a></li>
+<li><a href="products.html">our product</a></li>
+<li><a href="catalouge.html">Catalouge</a></li>
+<li><a href="calculator.html">tiles calculator</a></li>
 <li><a href="contact.html">Contact</a></li>
 </ul>
 </nav>
 </div>
 </div>
+<div class="col-xl-2 col-lg-2 d-none d-lg-block">
+<div class="say_hello">
+</br><div id="google_translate_element"></div>
+</div>
+</div>
+
 <div class="col-12">
-<div class="mobile_menu d-block d-lg-none"><div class="slicknav_menu"><a href="#" aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed" style="outline: none;"><span class="slicknav_menutxt">MENU</span><span class="slicknav_icon"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a><ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
+<div class="mobile_menu d-block d-lg-none">
+	<div class="slicknav_menu">
+	<a href="#" aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed" style="outline: none;">
+	<span class="slicknav_menutxt">MENU</span>
+	
+	</a>
+	<ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
 <li><a class="active" href="#" role="menuitem" tabindex="-1">home</a></li>
 <li><a href="about.html" role="menuitem" tabindex="-1">about</a></li>
-<li><a href="projects.html" role="menuitem" tabindex="-1">Projects</a></li>
-<li><a href="projects_D.html" role="menuitem" tabindex="-1">project details</a></li>
+<li><a href="catalouge.html" role="menuitem" tabindex="-1">our product</a></li>
+<li><a href="catalouge.html" role="menuitem" tabindex="-1">catalouge</a></li>
+<li><a href="calculator.html" role="menuitem" tabindex="-1">tiles calculator</a></li>
 <li><a href="contact.html" role="menuitem" tabindex="-1">Contact</a></li>
 </ul></div></div>
 </div>
@@ -85,7 +115,6 @@
 </div>
 </div>
 </header>
-
 
  <main> 
         <!--? Slider Area Start-->
@@ -97,16 +126,12 @@
                         <div class="row align-items-center">
                             <div class="col-xl-7 col-lg-8 col-md-10 ">
                                 <!-- Video icon -->
-                                <div class="video-icon">
-                                    <a class="popup-video btn-icon" href="#" data-animation="bounceIn" data-delay=".4s">
-                                        <i class="fas fa-play"></i>
-                                    </a>
-                                </div>
+                        
                                 <div class="hero__caption">
-                                    <span data-animation="fadeInUp" data-delay=".3s">Welcome to</span>
-                                    <h1 data-animation="fadeInUp" data-delay=".3s"> Aryavarta International</h1>
-                                    <p data-animation="fadeInUp" data-delay=".6s">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna sectetur adipisci.</p>
-                                    <a href="#" class="hero-btn" data-animation="fadeInLeft" data-delay=".3s">Contact Now<i class="ti-arrow-right"></i> </a>
+                                    <span data-animation="fadeInUp" data-delay=".3s" style="color:black;">Welcome to</span>
+                                    <h1 data-animation="fadeInUp" data-delay=".3s" style="color:black;"> Aryavarta International</h1>
+                                    <p data-animation="fadeInUp" data-delay=".6s" style="color: black">We wish to serve you with best capability&excellence.</p>
+                                    <a href="contact.html" class="hero-btn" data-animation="fadeInLeft" data-delay=".3s">Contact Now<i class="ti-arrow-right"></i> </a>
                                 </div>
                             </div>
                         </div>
@@ -118,16 +143,12 @@
                         <div class="row align-items-center">
                             <div class="col-xl-7 col-lg-8 col-md-10 ">
                                 <!-- Video icon -->
-                                <div class="video-icon">
-                                    <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=1aP-TXUpNoU" data-animation="bounceIn" data-delay=".4s">
-                                        <i class="fas fa-play"></i>
-                                    </a>
-                                </div>
+                                
                                 <div class="hero__caption">
-                                    <span data-animation="fadeInUp" data-delay=".3s">Welcome to</span>
-                                    <h1 data-animation="fadeInUp" data-delay=".3s"> Aryavarta International</h1>
-                                    <p data-animation="fadeInUp" data-delay=".6s">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna sectetur adipisci.</p>
-                                    <a href="#" class="hero-btn" data-animation="fadeInLeft" data-delay=".3s">Contact Now<i class="ti-arrow-right"></i> </a>
+                                    <span data-animation="fadeInUp" data-delay=".3s" style="color:black;">Welcome to</span>
+                                    <h1 data-animation="fadeInUp" data-delay=".3s" style="color:black;"> Aryavarta International</h1>
+                                    <p data-animation="fadeInUp" data-delay=".6s" style="color: black;">To create a dream place to live by providing luxury solution.</p>
+                                    <a href="contact.html" class="hero-btn" data-animation="fadeInLeft" data-delay=".3s">Contact Now<i class="ti-arrow-right"></i> </a>
                                 </div>
                             </div>
                         </div>
@@ -136,7 +157,7 @@
             </div>
             <!-- slider Social -->
             <div class="button-text d-none d-md-block">
-            <span>Scroll</span>
+            <span style="color: black">Scroll</span>
             </div>
         </div>
         <!-- Slider Area End -->
@@ -153,7 +174,7 @@
 <div class="single_prise">
 <div class="prise_header">
 <h5>Mission</h5>
-<p class="prise_text">We are totally committed towards fulfilling & satisfying our customer’s dreams.</p></br></br>
+<p class="prise_text">Making homes and work places excellent by delivering high quality tiles and tiling solution to the world</p></br></br>
 </div>
 <div class="prise_number">
 01
@@ -164,7 +185,7 @@
 <div class="single_prise">
 <div class="prise_header">
 <h5>Vision</h5>
-<p class="prise_text">We aspire to grow together and truly connect with our customer to be a more meaningful part of their lives.</p></br>
+<p class="prise_text">Improve the quality of tiles consistently to always give the world better tiles that last of lifetime</p></br></br>
 </div>
 <div class="prise_number">
 02
@@ -175,7 +196,8 @@
 <div class="single_prise">
 <div class="prise_header">
 <h5>Values</h5>
-<p class="prise_text">We should all be proud of the exceptional business we have created with more than 1k clients and remember the core values</p>
+<p class="prise_text">We will give equal importance to the perpective of every individual and accordingly serve them in the best possibe way
+</p></br></br>
 </div>
 <div class="prise_number">
 03
@@ -608,5 +630,17 @@ Copyright © 2020  All rights reserved by Aryavarta | International
     })();
 </script>
 <!-- /GetButton.io widget -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
 
+
+<script type="text/javascript">
+    (function(){var gtConstEvalStartTime = new Date();
+function d(b){var a=document.getElementsByTagName("head")[0];a||(a=document.body.parentNode.appendChild(document.createElement("head")));a.appendChild(b)}function _loadJs(b){var a=document.createElement("script");a.type="text/javascript";a.charset="UTF-8";a.src=b;d(a)}function _loadCss(b){var a=document.createElement("link");a.type="text/css";a.rel="stylesheet";a.charset="UTF-8";a.href=b;d(a)}function _isNS(b){b=b.split(".");for(var a=window,c=0;c<b.length;++c)if(!(a=a[b[c]]))return!1;return!0}
+function _setupNS(b){b=b.split(".");for(var a=window,c=0;c<b.length;++c)a.hasOwnProperty?a.hasOwnProperty(b[c])?a=a[b[c]]:a=a[b[c]]={}:a=a[b[c]]||(a[b[c]]={});return a}window.addEventListener&&"undefined"==typeof document.readyState&&window.addEventListener("DOMContentLoaded",function(){document.readyState="complete"},!1);
+if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google.translate._const');c._cest = gtConstEvalStartTime;gtConstEvalStartTime = undefined;c._cl='en';c._cuc='googleTranslateElementInit';c._cac='';c._cam='';c._ctkk='442526.59108499';var h='translate.googleapis.com';var s=(true?'https':window.location.protocol=='https:'?'https':'http')+'://';var b=s+h;c._pah=h;c._pas=s;c._pbi=b+'/translate_static/img/te_bk.gif';c._pci=b+'/translate_static/img/te_ctrl3.gif';c._pli=b+'/translate_static/img/loading.gif';c._plla=h+'/translate_a/l';c._pmi=b+'/translate_static/img/mini_google.png';c._ps=b+'/translate_static/css/translateelement.css';c._puh='translate.google.com';_loadCss(c._ps);_loadJs(b+'/translate_static/js/element/main.js');})();})();
+</script>
 </body></html>

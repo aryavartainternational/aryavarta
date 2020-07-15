@@ -42,6 +42,7 @@ a,
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+
 }
 
 /* line 20, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/theme-default.scss */
@@ -67,7 +68,7 @@ a:hover,
 /* line 34, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/theme-default.scss */
 a,
 button {
-  color: #1F1F1F;
+  color: #f8f9fa;
   outline: medium none;
 }
 

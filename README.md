@@ -1,2 +1,0 @@
-# aryavarta
-DJ
