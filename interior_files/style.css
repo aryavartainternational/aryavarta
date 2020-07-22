@@ -3821,7 +3821,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
   top: 0;
   width: 100%;
   height: 546px;
-  background: #F5FBFF;
+  background: transparent;
   content: '';
 }
 
