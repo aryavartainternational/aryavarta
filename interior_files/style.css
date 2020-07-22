@@ -3373,7 +3373,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
 
 /* line 1, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_insta.scss */
 .instagram_area {
-  padding-top: 180px;
+  padding-top: 0px;
   padding-bottom: 150px;
 }
 
@@ -3795,7 +3795,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
 .works_area {
   position: relative;
   padding-top: 180px;
-  padding-bottom: 100px;
+  padding-bottom: 0px;
 }
 
 @media (max-width: 767px) {

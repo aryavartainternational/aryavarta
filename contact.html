@@ -89,7 +89,7 @@
 
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: black;">Our Products</a>
                   <ul class="dropdown-menu">                    
-                    <li><a class="dropdown-item" href="flour_tiles.html">Flour - Tiles</a></li>
+                    <li><a class="dropdown-item" href="floor_tiles.html">Floor - Tiles</a></li>
                     <li><a class="dropdown-item" href="wall_tiles.html">Wall - Tiles</a></li>
                   </ul>
                 </li>
@@ -162,7 +162,7 @@
 </div>
 <div style="padding-bottom: 18px;"><input class="boxed-btn3-line" name="skip_Submit" value="Submit" type="submit"/></div>
 <div>
-<div style="float:right"><a  href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
+<div style="float:right"><a  href="https://www.100forms.com" id="lnk100" title="form to email" style="color: transparent;">form to email</a></div>
 <script src="https://www.100forms.com/js/FORMKEY:NQWSMRB963QP" type="text/javascript"></script>
 </div>
 </form>
@@ -247,14 +247,14 @@ return isEmpty(email) || re.test(email);
 <div class="row align-items-center">
 <div class="col-lg-6 col-md-6">
 <div class="query_text">
-<h3>Have any project or query? <br>
-Just say hello <a href="#">Mail Us</a></h3>
+<h3>Have any project or query?<br>
+Just say hello <a href="contact.html">Mail Us</a></h3>
 </div>
 </div>
 <div class="col-lg-6 col-md-6">
 <div class="query_number">
-<h3>+10 673 563 629</h3>
-<p><a href="#">support@interior.com</a></p>
+<h3>+91 9979940241</h3>
+<p><a href="#">aryavartainternational@gmail.com</a></p>
 </div>
 </div>
 </div>
@@ -264,41 +264,31 @@ Just say hello <a href="#">Mail Us</a></h3>
 <div class="footer_top">
 <div class="container">
 <div class="row">
-<div class="col-xl-3 col-md-6 col-lg-3">
+<div class="col-xl-3 col-md-6 col-lg-5">
 <div class="footer_widget">
 <h3 class="footer_title">
 Address
 </h3>
 <ul>
-<li><p>700/D, Kings road, Green land
-New York-9274</p></li>
-<li><a href="#"> +10 357 258 3827</a></li>
-<li><a href="#">contact@interior.com</a></li>
+<li><p>Goddown no.5,<br>Plot No. 1/P,S.No.78/1,<br>At Vajepar,Morbi,<br>Gujrat-363641</p></li>
+<li><a href="#"> +91 9979940241</a></li>
+<li><a href="#">aryavartainternational@gmail.com</a></li>
 </ul>
 </div>
 </div>
-<div class="col-xl-2 col-md-6 col-lg-2">
-<div class="footer_widget">
-<h3 class="footer_title">
-Services
-</h3>
-<ul>
-<li><a href="#">Interior</a></li>
-<li><a href="#"> Architecture</a></li>
-<li><a href="#">3D Modeling</a></li>
-</ul>
-</div>
-</div>
+
 <div class="col-xl-3 col-md-6 col-lg-3">
 <div class="footer_widget">
 <h3 class="footer_title">
 Company
 </h3>
 <ul>
-<li><a href="#">About</a></li>
-<li><a href="#">Blog</a></li>
-<li><a href="#"> Contact</a></li>
-<li><a href="#">Appointment</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="floor_tiles.html">Our products</a></li>
+<li><a href="catalogue.html">Catalogue</a></li>
+<li><a href="calc.html">Tiles calculator</a></li>
+<li><a href="contact.html">Contact us</a></li>
+
 </ul>
 </div>
 </div>
@@ -310,10 +300,34 @@ Subscribe
 <form action="#" class="newsletter_form" method="post" action="//submit.form" onSubmit="return validateForm();">
 <input type="text" placeholder="Enter your mail" type="text" id="data_1" name="data_1"  class="form-control"/>
 <button type="submit" name="skip_Submit" value="" type="submit">Subscribe</button>
-</div>
+<div style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
+<script src="https://www.100forms.com/js/FORMKEY:6N6BJ6DDEPHC" type="text/javascript"></script>
+</form>
 
 
-<p class="newsletter_text">Esteem spirit temper too say adieus who direct esteem esteems luckily.</p>
+
+<script type="text/javascript">
+function validateForm() {
+if (isEmpty(document.getElementById('data_1').value.trim())) {
+alert('Email is required!');
+return false;
+}
+if (!validateEmail(document.getElementById('data_1').value.trim())) {
+alert('Email must be a valid email address!');
+return false;
+}
+return true;
+}
+function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+function validateEmail(email) {
+var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+return isEmpty(email) || re.test(email);
+}
+</script>
+
+
+
+
 </div>
 </div>
 </div>
